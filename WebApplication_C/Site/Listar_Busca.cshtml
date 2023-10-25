@@ -1,0 +1,42 @@
+﻿<!--Códgo C# inicial-->
+@{
+
+    Layout = null;
+
+    string nome = Request.Form["nome"];
+
+    List<Produto> busca = Mercado.GetProdutoNome(nome);
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <title>Busca de Produto</title>
+</head>
+<body>
+    <div>
+        <!--Sempre que precisar inserir códigos C# no meio do HTML é só inserir um "ARROBA"-->
+        <h1>Resultado da busca por produtos</h1>
+
+        @foreach (Produto prod in busca) 
+        { 
+            <div>
+                <p>Produto: @prod.Nome</p>
+                <p>Descrição: @prod.Descricao</p>
+                <p>Preço: @prod.Preco</p>
+                <p>Marca: @prod.Marca</p>
+                <p>Fabricação: @prod.Fabricacao.ToString("dd/MM/yyy")</p>
+                <p>Validade: @prod.Validade.ToString("dd/MM/yyy")</p>
+                <p>Quantidade: @prod.Quantidade</p>
+                <p>Código de Barras: @prod.Cod_Barras</p>
+                <br>
+            </div>
+        }
+        <p><a href="~/Site/index.cshtml">Voltar para a página inicial</a>
+    </div>
+</body>
+</html>

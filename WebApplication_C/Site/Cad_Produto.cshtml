@@ -1,0 +1,52 @@
+﻿<!--Iniciando o arquivo CSHTML-->
+
+<!--Logo abaixo um exemplo de bloco de código C# inserido no arquivo -->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <title>..::Cadastro de produtos::..</title>
+</head>
+<body>
+    <div>
+        <h1>Cadastro de Produtos</h1>
+        <p>Realize o cadastro do novo produto completando os campos abaixo:</p>
+        <form method="post" action="~/Site/Insere_Produto.cshtml">
+            <label>Código de Barras:</label>
+            <input type="number" name="cod_Barras" />
+            <br />
+            <label>Nome:</label>
+            <input type="text" name="nome" />
+            <br />
+            <label>Descrição:</label>
+            <input type="text" name="descricao" />
+            <br />
+            <label>Preço:</label>
+            <input type="text" name="preco" />
+            <br />
+            <label>Marca:</label>
+            <input type="text" name="marca" />
+            <br />
+            <label>Fabricação:</label>
+            <input type="date" name="fabricacao" />
+            <br />
+            <label>Validade:</label>
+            <input type="date" name="validade" />
+            <br />
+            <label>Quantidade:</label>
+            <input type="number" name="quantidade" />
+            <br />
+
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+
+        <p>By Maurício Cerqueira</p>
+    </div>
+</body>
+</html>

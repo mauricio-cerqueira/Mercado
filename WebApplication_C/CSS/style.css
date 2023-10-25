@@ -1,0 +1,17 @@
+﻿body{
+    display:flex;
+    justify-content:center;
+}
+
+div {
+     width: 50%;
+    
+    text-align:left;
+    background-color: green;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 'Lucida Grande';
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 10px;
+}

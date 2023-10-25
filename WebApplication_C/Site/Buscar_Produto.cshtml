@@ -1,0 +1,29 @@
+﻿<!--Iniciando o arquivo CSHTML-->
+
+<!--Logo abaixo um exemplo de bloco de código C# inserido no arquivo -->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <title>..::Busca de produtos::..</title>
+</head>
+<body>
+    <div>
+        <h1>Busca de produtos</h1>
+        <form method="post" action="~/Site/Listar_Busca.cshtml">
+            <label>Nome do Produto:</label>
+            <input type="text" name="nome" />
+            <br />
+            <button type="submit">Buscar Produto</button>
+        </form>
+
+        <p>By Maurício Cerqueira</p>
+    </div>
+</body>
+</html>

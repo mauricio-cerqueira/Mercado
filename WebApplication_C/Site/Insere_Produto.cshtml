@@ -1,0 +1,37 @@
+﻿<!--Códgo C# inicial-->
+@{
+
+    Layout = null;
+
+    long Cod_barras = long.Parse(Request.Form["cod_Barras"]);
+    string Nome = Request.Form["nome"];
+    string Descricao = Request.Form["descricao"];
+    float Preco = float.Parse(Request.Form["preco"]);
+    string Marca = Request.Form["marca"];
+    DateTime Fabricacao = DateTime.Parse(Request.Form["fabricacao"]);
+    DateTime Validade = DateTime.Parse(Request.Form["validade"]);
+    int Quantidade = int.Parse(Request.Form["quantidade"]);
+
+    Produto produto = new Produto(Cod_barras, Nome, Descricao, Preco, Marca, Fabricacao, Validade, Quantidade);
+
+    Mercado.Produtos.Add(produto);
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <div>
+        <!--Sempre que precisar inserir códigos C# no meio do HTML é só inserir um "ARROBA"-->
+        <h1>Você cadastrou o produto @produto.Nome com sucesso!</h1>
+
+        <p><a href="~/Site/index.cshtml">Voltar para a página inicial</a>
+    </div>
+</body>
+</html>
